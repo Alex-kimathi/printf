@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 				write(1, format, 1);
 			else if (*format == 'c')
 			{
-				char c = va_arg(args, int);
+				char c = (char)va_arg(args, int);
 
 				write(1, &c, 1);
 				count++;
