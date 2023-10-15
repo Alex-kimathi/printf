@@ -1,4 +1,5 @@
 #include "main.h"
+<<<<<<< HEAD
 
 /**
  * _printf - a function to produce formatted
@@ -43,3 +44,5 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
+=======
+>>>>>>> 86ea7072fd11501fe6a1a38f79a3fd4f7b207447
