@@ -2,50 +2,10 @@
 /**
  * _printf - a function to produce formatted
  * output to stdout
- * @c: handles char
- * @%: handles the sign
- * @s: handles a string
  *
  * @format: format specifier
  * Return: the number of characters printed
  */
-/*
-int _printf(const char *format, ...)
-{
-	unsigned int i, s_count;
-	unsigned int count = 0;
-
-	va_list args;
-	va_start(args, format);
-
-	for (i = 0; format[i] != '\0'; i++)
-	{
-		if (format[i] != '%')
-		{
-			writec(format[i]);
-		}
-		else if (format[i + 1] == 'c')
-		{
-			writec(va_arg(args, int));
-			i++;
-		}
-		else if (format[i + 1] == 's')
-		{
-			s_count = writes(va_arg(args, char *));
-			i++;
-			count += (s_count - 1);
-		}
-		else if (format[i + 1] == '%')
-		{
-			writec('%');
-		}
-		count++;
-	}
-
-	va_end(args);
-	return (count);
-}
-*/
 int _printf(const char *format, ...)
 {
 	int count = 0;
