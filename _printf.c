@@ -39,6 +39,14 @@ int _printf(const char *format, ...)
 				write(1, str, strlen(str));
 				count += strlen(str);
 			}
+			else if (*format == 'd') || (*format == 'i')
+						    {
+							    int d = va_arg(args, int);
+							    if (i < 0)
+							    {
+								    d = -d;
+								    write(1, &d, 1);
+							    }
 		}
 		format++;
 	}
